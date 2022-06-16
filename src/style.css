@@ -1,62 +1,65 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
 * {
-	margin: 0;
-	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-	display: flex;
-	justify-content: flex-start;
 	align-items: center;
+	background: #1e2329;
+	display: flex;
 	flex-direction: column;
+	justify-content: flex-start;
 	margin-top: 10%;
 	min-height: 100vh;
-	background: #2f363e;
 }
 
 .title {
-	font-size: 2.5rem;
-	font-weight: 300;
-	color: #fff;
-	text-align: center;
-	margin-bottom: 5rem;
+	align-items: center;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	margin-bottom: 5rem;
+	text-align: center;
+}
+
+.title > h1 {
+	color: #fff;
+	font-size: 3.5rem;
+	font-weight: 300;
 }
 
 #time {
+	color: #fff;
 	display: flex;
 	gap: 40px;
-	color: #fff;
 }
 
 #time > .circle {
+	align-items: center;
+	display: flex;
+	height: 150px;
+	justify-content: center;
 	position: relative;
 	width: 150px;
-	height: 150px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 #time > .circle > svg {
-	position: relative;
-	width: 150px;
 	height: 150px;
+	position: relative;
 	transform: rotate(270deg);
+	width: 150px;
 }
 
 #time > .circle > svg > circle {
-	width: 100%;
-	height: 100%;
 	fill: transparent;
-	stroke: #191919;
+	height: 100%;
 	stroke-width: 4;
+	stroke: #191919;
 	transform: translate(5px, 5px);
+	width: 100%;
 }
 
 #time > .circle > svg > circle:nth-child(2) {
@@ -65,43 +68,43 @@ body {
 }
 
 #time div {
+	font-size: 1.5em;
+	font-weight: 500;
 	position: absolute;
 	text-align: center;
-	font-weight: 500;
-	font-size: 1.5em;
 }
 
 #time div span {
-	position: absolute;
-	transform: translateX(-50%) translateY(-10%);
-	font-size: .35em;
+	font-size: 0.35em;
 	font-weight: 300;
-	letter-spacing: .1em;
+	letter-spacing: 0.1em;
+	position: absolute;
 	text-transform: uppercase;
+	transform: translateX(-50%) translateY(-50%);
 }
 
 #time .ap {
-	position: relative;
 	font-size: 1em;
+	position: relative;
 	transform: translateX(-20px);
 }
 
 .dots {
+	display: flex;
+	height: 100%;
+	justify-content: center;
 	position: absolute;
 	width: 100%;
-	height: 100%;
 	z-index: 10;
-	display: flex;
-	justify-content: center;
 }
 
 .dots::before {
-	content: '';
-	position: absolute;
-	top: -3px;
-	width: 15px;
-	height: 15px;
 	background: var(--clr);
 	border-radius: 50%;
 	box-shadow: 0 0 10px var(--clr), 0 0 60px var(--clr);
+	content: '';
+	height: 15px;
+	position: absolute;
+	top: -3px;
+	width: 15px;
 }

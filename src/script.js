@@ -11,7 +11,7 @@ const hrDot = document.querySelector(".hr_dot");
 const minDot = document.querySelector(".min_dot");
 const secDot = document.querySelector(".sec_dot");
 
-setInterval(() => {
+function setCurrentTime() {
 	const rightNow = dayjs();
 
 	const hours = rightNow.format("hh");
@@ -31,4 +31,10 @@ setInterval(() => {
 	hrDot.style.transform = `rotate(${hours * 30}deg)`;
 	minDot.style.transform = `rotate(${minutes * 6}deg)`;
 	secDot.style.transform = `rotate(${seconds * 6}deg)`;
+}
+
+setInterval(() => {
+	setCurrentTime()
 }, 1000);
+
+setCurrentTime()
